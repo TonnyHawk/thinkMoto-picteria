@@ -1,0 +1,38 @@
+.ball{
+   position: absolute;
+   border-radius: 100%;
+}
+
+#ball-one{
+   background: linear-gradient(157.46deg, #8A17B3 14.67%, #0C0098 61.96%, #0F0014 97.51%);
+   width: 10.6rem;
+   height: 10.6rem;
+   top: 13.2rem;
+   right: -2.2rem;
+   @media (min-width: 35em){
+      right: 2.2rem;
+   }
+   @media (min-width: 41.875em){
+      right: 10vw;
+   }
+}
+#ball-two{
+   background: linear-gradient(125.48deg, #E37F09 5.31%, rgba(227, 9, 23, 0.74) 92.9%);
+   width: 4.7rem;
+   height: 4.7rem;
+   top: 52.3rem;
+   left: 3.9rem;
+   @media (min-width: 41.875em){
+      left: 13vw;
+   }
+}
+#ball-three{
+   background: linear-gradient(180deg, #E91515 0%, rgba(233, 21, 123, 0.71) 60.42%, rgba(199, 20, 170, 0.92) 100%);
+   width: 7.2rem;
+   height: 7.2rem;
+   top: 66.1rem;
+   right: -4rem;
+   @media (min-width: 41.875em){
+      right: 6vw;
+   }
+}

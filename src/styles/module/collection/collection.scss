@@ -1,0 +1,56 @@
+.collection {
+   display: flex;
+   position: relative;
+   justify-content: center;
+   margin: 21rem auto 0;
+
+   // .collection__photo
+
+   &__photo {
+      width: 26rem;
+      height: 17.5rem;
+      box-shadow: 0px 6px 27px -9px #0E112D;
+      flex-shrink: 0;
+
+      &:nth-child(1), &:nth-child(3){
+         width: 19.5rem;
+         height: 13rem;
+         position: absolute;
+         z-index: 1;
+         max-width: 22.2rem;
+         max-height: 14.8rem;
+         @media (min-width: 41.875em){
+            height: 18vw;
+            width: 27vw;
+         }
+      }
+      &:nth-child(1){
+         top: -11.2rem;
+         left: -2rem;
+         @media (min-width: 41.875em){
+            left: -12vw;
+            top: -12vw;
+         }
+      }
+      &:nth-child(2){
+         position: relative;
+         z-index: 2;
+         box-shadow: 0px 6px 50px -3px #0E112D;
+         max-height: 20.4rem;
+         max-width: 30.5rem;
+         @media (min-width: 41.875em){
+            width: 40vw;
+            height: 27vw;
+         }
+      }
+      &:nth-child(3){
+         bottom: -10.9rem;
+         right: -1.8rem;
+         filter: saturate(165%) brightness(0.9);
+         @media (min-width: 41.875em){
+            right: -12vw;
+            bottom: -12vw;
+         }
+      }
+   }
+}

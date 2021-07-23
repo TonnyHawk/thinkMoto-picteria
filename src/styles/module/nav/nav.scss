@@ -1,0 +1,35 @@
+.nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 121rem;
+   font-family: gilroy;
+   padding-top: 2.6rem;
+   margin: 0 3rem;
+   width: 100%;
+   @media (min-width: 22.5em){
+      margin: 0 3.5rem;
+   }
+   @media (min-width: 66.875em){
+      padding-top: 4.6rem;
+   }
+
+   // .nav__menu-icon
+
+   &__menu-icon {
+      cursor: pointer;
+      order: 2;
+      @media (min-width: 66.875em){
+         order: 1;
+      }
+   }
+
+   // .nav__logo
+
+   &__logo {
+      order: 1;
+      @media (min-width: 66.875em){
+         order: 2;
+      }
+   }
+}
