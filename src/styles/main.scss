@@ -22,7 +22,8 @@ html{
    font-family: gilroy;
 }
 #bg{
-   background: linear-gradient(33deg, #42C8E6 4.15%, rgba(83, 77, 189, 0.610729) 51.61%, rgba(215, 21, 125, 0.58) 98.64%);
+   // background: linear-gradient(33deg, #42C8E6 4.15%, rgba(83, 77, 189, 0.610729) 51.61%, rgba(215, 21, 125, 0.58) 98.64%);
+   background: #E8F2F4;
    @include layer;
    position: relative;
    overflow: hidden;

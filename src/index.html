@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,21 @@
    <link rel="stylesheet" href="css/main.css">
    <title>picteria</title>
 </head>
+
 <body>
 
    <div id="bg">
 
       <div class="container">
-         
-         <div class="nav">
-            <div class="nav__menu-icon"><img src="img/icons/menu-ic.svg" alt=""></div>
+
+         <div class="nav darken">
+            <div class="nav__menu-icon">
+               <svg width="51" height="30" viewBox="0 0 51 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M51 2H9.53674e-07" stroke-width="3" />
+                  <path d="M51 15H19" stroke-width="3" />
+                  <path d="M51 28H31" stroke-width="4" />
+               </svg>
+            </div>
             <div class="nav__logo logo">
                <p class="logo__name">picteria</p>
                <div class="logo__dash"></div>
@@ -23,7 +31,7 @@
          </div>
 
 
-         <header class="header">
+         <!-- <header class="header">
             <div class="header__offer">
                <h1 class="header__title">adjust any photo in a minutes</h1>
                <p class="header__descr">Add a great filters to your photo without any complex operations, just upload and see how it works!</p>
@@ -42,7 +50,42 @@
                   </div>
                </div>
             </div>
-         </header>
+         </header> -->
+      </div>
+
+
+      <div id="card" class="card">
+         <div class="card__close-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M23 1L1.5 22.5M1.5 1L23 22.5" stroke="black" stroke-width="2" />
+            </svg>
+         </div>
+         <div class="card__header">
+            <h1 class="card__title">Upload your files</h1>
+            <p class="card__text">Files should be jpg or png </p>
+         </div>
+         <div class="card__body">
+            <div class="card__upload-area"></div>
+            <div class="card__files">
+               <h2 class="card__heading">Uploading files</h2>
+               <div class="card__file file">
+                  <div class="file__icon"></div>
+                  <div class="file__info">
+                     <div class="flex justify-content-between">
+                        <p class="file__name">my_new_screen-shot</p>
+                        <p class="file__progress-indicator">100%</p>
+                     </div>
+                     <div class="file__progress-bar"></div>
+                  </div>
+                  <div class="file__status">
+                     <div class="status-btn success"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="card__footer">
+            <p class="btn">Upload</p>
+         </div>
       </div>
 
       <div class="ball" id="ball-one"></div>
@@ -53,4 +96,5 @@
    <script src="js/vendors/jquery.min.js"></script>
    <script src="styles/module/ibg/ibg.js"></script>
 </body>
+
 </html>

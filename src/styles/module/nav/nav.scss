@@ -31,4 +31,20 @@
          order: 2;
       }
    }
+
+   path{
+      stroke: white;
+   }
+
+   &.darken{
+      .logo{
+         color: black;
+      }
+      .logo__dash{
+         background-color: black;
+      }
+      path{
+         stroke: black;
+      }
+   }
 }
