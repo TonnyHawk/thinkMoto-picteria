@@ -1,5 +1,6 @@
 @import 'basic/reset.css';
 @import 'basic/mixins';
+@import 'basic/colors';
 @import 'module/ibg/ibg.css';
 
 @import 'layout/grid';
@@ -56,3 +57,55 @@ h1, h2{
    border: none;
 }
 
+
+.flex {
+   display: flex;
+}
+.justify-content-between {
+   justify-content: space-between;
+}
+.status-btn {
+   position: relative;
+   @include square(3.4rem);
+   border-radius: 100%;
+   @include perfect-center;
+   &:after{
+      content: '';
+      @include layer;
+   }
+   &.success {
+      background: $success;
+      &:after{
+         background-image: url('../img/icons/status-btn/success.svg');
+         background-position: center;
+         background-size: auto;
+         background-repeat: no-repeat;
+      }
+   }
+   &.fail {
+      background: $fail;
+      &:after{
+         background-image: url('../img/icons/status-btn/failed.svg');
+         background-position: center;
+         background-size: auto;
+         background-repeat: no-repeat;
+      }
+   }
+}
+.btn{
+   font-family: Gilroy;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 150%;
+   padding: 2rem 3rem;
+   background: #0563F1;
+   border-radius: 11px;
+   
+   text-align: center;
+   
+   color: #FFFFFF;
+}
+
+
+@import 'module/card/card';

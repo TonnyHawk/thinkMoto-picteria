@@ -1,0 +1,125 @@
+.file {
+   border-radius: 13px;
+   display: flex;
+   align-items: center;
+
+   // .file__icon
+
+   &__icon {
+      margin-right: 1.9rem;
+   }
+
+   // .file__info
+
+   &__info {
+      height: 100%;
+      width: 100%;
+   }
+
+   // .file__name
+
+   &__name {
+      font-family: gilroy;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+      margin-bottom: 1.5rem;
+      padding-right: 0.5rem;
+   }
+
+   // .file__progress-indicator
+
+   &__progress-indicator {
+      margin-bottom: 0.7rem;
+         // .file__progress-indicator-txt
+
+      &-txt {
+         font-family: gilroy;
+         font-style: normal;
+         font-weight: normal;
+         font-size: 16px;
+         line-height: 19px;
+   
+         color: #787878;
+      }
+
+      // .file__progress-indicator-status
+
+      &-status {
+         display: none;
+      }
+   }
+
+   // .file__progress-bar
+
+   &__progress-bar {
+   }
+
+   // .file__status
+
+   &__status {
+      display: none;
+   }
+
+   &.is-loaded{
+      .file{
+         // .file.is-loaded .file__progress-indicator
+
+         &__progress-indicator {
+
+            // .file.is-loaded .file__progress-indicator-txt
+
+            &-txt {
+               display: none;
+            }
+
+            // .file.is-loaded .file__progress-indicator-status
+
+            &-status {
+               display: block;
+               .status-btn{
+                  @extend .status-btn.success;
+               }
+            }
+         }
+      }
+   }
+
+   &.is-selected{
+      background: #F2F3F7;
+   }
+
+   &.is-failed{
+
+      .file{
+
+         // .file.is-failed .file__name
+
+         &__name {
+            color: $fail;
+         }
+
+         // .file.is-failed .file__progress-indicator
+
+         &__progress-indicator {
+
+            // .file.is-failed .file__progress-indicator-txt
+
+            &-txt {
+               display: none;
+            }
+
+            // .file.is-loaded .file__progress-indicator-status
+
+            &-status {
+               display: block;
+               .status-btn{
+                  @extend .status-btn.fail;
+               }
+            }
+         }
+      }
+   }
+}
