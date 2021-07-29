@@ -2,14 +2,29 @@
    background-color: white;
    margin-top: 15.3rem;
    border-radius: 2.4rem 2.4rem 0 0;
-   padding: 3rem 3.4rem 6.5rem;
    box-shadow: 0px 4px 69px #A0C0C7;
+   position: absolute;
+   width: 100%;
+   bottom: 0;
+   padding: 3rem 0 0;
+
+   height: 70%;
+   overflow-y: auto;
+
+   @media (min-width: 41.25em){
+      // border-radius: 2.4rem;
+   }
 
    // .card__close-btn
 
    &__close-btn {
       display: flex;
       justify-content: flex-end;
+      position: sticky;
+      top: 0;
+      right: 0;
+      padding: 0 3.4rem 0;
+      // z-index: 10;
 
       svg{
          @include square(1.3rem);
@@ -47,6 +62,7 @@
    // .card__body
 
    &__body {
+      padding: 0 3.4rem;
    }
 
    // .card__upload-area
@@ -81,7 +97,13 @@
    // .card__footer
 
    &__footer {
-      margin-top: 6rem;
+      padding: 5rem 3.4rem 6rem;
+      position: sticky;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      background: white;
+      z-index: 10;
    }
 }
 
