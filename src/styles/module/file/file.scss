@@ -7,6 +7,27 @@
 
    &__icon {
       margin-right: 1.9rem;
+      width: 10rem;
+      height: 13rem;
+      position: relative;
+      flex: 0 0 auto;
+
+      &:after{
+         content: '';
+         @include layer;
+      }
+
+      // .file__icon--jpg
+
+      &--jpg{
+         background: url('../../../img/icons/img-types/type-jpg.svg') no-repeat center/100%;
+      }
+      &--webp{
+         background: url('../../../img/icons/img-types/type-webp.svg') no-repeat center/100%;
+      }
+      &--png{
+         background: url('../../../img/icons/img-types/type-png.svg') no-repeat center/100%;
+      }
    }
 
    // .file__info
@@ -62,6 +83,7 @@
    &__status {
       display: none;
    }
+
 
    &.is-loaded{
       .file{

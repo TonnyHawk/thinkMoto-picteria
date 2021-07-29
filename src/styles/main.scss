@@ -105,6 +105,10 @@ h1, h2{
    text-align: center;
    
    color: #FFFFFF;
+
+   &.is-disabled{
+      background: #E0E0E0;
+   }
 }
 
 @import 'module/card/card';
