@@ -115,3 +115,8 @@ h1, h2{
 @import 'module/slider/slider';
 
 @import 'module/ic-wth-txt/ic-wth-txt';
+
+.viewport{
+   max-height: 100vh;
+   overflow: hidden;
+}
