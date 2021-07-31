@@ -1,0 +1,40 @@
+.ic-wth-txt {
+   display: flex;
+
+   // .ic-wth-txt__ic
+
+   &__ic {
+      path{
+         stroke: black;
+      }
+   }
+
+   // .ic-wth-txt__txt
+
+   &__txt {
+      color: black;
+      font-family: gilroy;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      margin: 0 2rem;
+      display: none;
+      @media (min-width: 32.5em){
+         display: block;
+      }
+   }
+
+   &.is-dark{
+      .ic-wth-txt{
+         &__ic{
+            path{
+               stroke: black;
+            }
+         }
+         &__txt{
+            color: black;
+         }
+      }
+   }
+}

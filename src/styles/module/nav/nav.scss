@@ -18,18 +18,12 @@
    &__menu-icon {
       cursor: pointer;
       order: 2;
-      @media (min-width: 66.875em){
-         order: 1;
-      }
    }
 
    // .nav__logo
 
    &__logo {
       order: 1;
-      @media (min-width: 66.875em){
-         order: 2;
-      }
    }
 
    path{
