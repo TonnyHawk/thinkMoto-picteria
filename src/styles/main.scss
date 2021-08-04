@@ -117,6 +117,8 @@ h1, h2{
 @import 'module/ic-wth-txt/ic-wth-txt';
 
 .viewport{
-   max-height: 100vh;
-   overflow: hidden;
+   @media (min-width: 68.75em){
+      max-height: 100vh;
+      overflow: hidden;
+   }
 }
