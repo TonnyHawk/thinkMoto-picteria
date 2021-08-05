@@ -12,11 +12,11 @@
 @import 'module/header/header';
 @import 'module/ball/ball';
 
-@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Regular', 500);
-@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Semibold', 600);
-@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Bold', bold);
-@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Black', 800);
-@include font-face(aclonica, '../fonts/Aclonica/Aclonica-Regular');
+@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Regular', 500, normal, woff ttf);
+@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Semibold', 600, normal, woff ttf);
+@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Bold', bold, normal, woff ttf);
+@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Black', 800, normal, woff ttf);
+@include font-face(aclonica, '../fonts/Aclonica/Aclonica-Regular', 400, normal, woff ttf woff2);
 
 html{
    font-size: 62.5%;

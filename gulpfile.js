@@ -38,8 +38,10 @@ function css(){
 }
 
 let go = series(css, server)
+let styles = series(css)
 
 exports.default = go;
+exports.styles = styles;
 
 
 
