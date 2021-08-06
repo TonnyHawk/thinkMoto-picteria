@@ -10,7 +10,7 @@ class Header extends Component {
          <div class="header__offer">
            <h1 class="header__title">adjust any photo in a minutes</h1>
            <p class="header__descr">Add a great filters to your photo without any complex operations, just upload and see how it works!</p>
-           <button class="header__action action-btn"><Link to="/upload">Upload a photo</Link></button>
+           <Link to="/upload" className="header__action action-btn">Upload a photo</Link>
          </div>
          <div class="header__aside">
            <div class="header__collection collection">
