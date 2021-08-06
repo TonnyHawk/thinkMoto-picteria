@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/main.css">
+   <title>picteria</title>
+</head>
+
+<body>
+
+   <div id="bg">
+
+      <div class="viewport">
+
+
+         <div class="container">
+
+            <div class="nav darken">
+               <div class="nav__menu-icon ic-wth-txt">
+                  <div class="ic-wth-txt__txt">
+                     Decline
+                  </div>
+                  <div class="ic-wth-txt__ic">
+                     <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 1.33035L1 20.3304" stroke-width="2" />
+                        <path d="M1 1.66965L20 20.6696" stroke-width="2" />
+                     </svg>
+                  </div>
+               </div>
+               <div class="nav__logo logo">
+                  <p class="logo__name">picteria</p>
+                  <div class="logo__dash"></div>
+                  <p class="logo__descr">fast photo adjustments</p>
+               </div>
+            </div>
+
+
+            <!-- <header class="header">
+            <div class="header__offer">
+               <h1 class="header__title">adjust any photo in a minutes</h1>
+               <p class="header__descr">Add a great filters to your photo without any complex operations, just upload and see how it works!</p>
+               <button class="header__action action-btn">Upload a photo</button>
+            </div>
+            <div class="header__aside">
+               <div class="header__collection collection">
+                  <div class="collection__photo ibg">
+                     <img src="img/collection/big/2.jpg" alt="">
+                  </div>
+                  <div class="collection__photo ibg">
+                     <img src="img/collection/big/1.jpg" alt="">
+                  </div>
+                  <div class="collection__photo ibg">
+                     <img src="img/collection/big/1.jpg" alt="">
+                  </div>
+               </div>
+            </div>
+         </header> -->
+         </div>
+
+         <!-- <div class="container">
+         <div class="slider" id="slider">
+            <div class="slider__current-slide">
+               <div class="slider__current-photo ibg">
+                  <img src="img/collection/big/1.jpg" alt="">
+               </div>
+               <div class="slider__current-info">
+                  <h2 class="slider__current-title">original</h2>
+                  <p class="slider__current-description">Just the original look of your uploaded image</p>
+                  <p class="slider__current-btn btn">Download</p>
+               </div>
+            </div>
+            <div class="slider__filters">
+               <div class="slider__filter">
+
+
+                  <div class="slider__filter-overlay overlay">
+                     <div class="slider__filter-title overlay__content">Black & white</div>
+                     <div class="overlay__bg"></div>
+                  </div>
+
+
+         <div class="slider__filter-title">Black & white</div>
+         <div class="slider__filter-img ibg">
+            <img src="img/collection/big/2.jpg" alt="">
+         </div>
+      </div>
+      <div class="slider__filter">
+         <div class="slider__filter-title">Black & white</div>
+         <div class="slider__filter-img ibg">
+            <img src="img/collection/big/2.jpg" alt="">
+         </div>
+      </div>
+      <div class="slider__filter">
+         <div class="slider__filter-title">Black & white</div>
+         <div class="slider__filter-img ibg">
+            <img src="img/collection/big/2.jpg" alt="">
+         </div>
+      </div>
+   </div>
+   </div>
+   </div>
+-->
+
+         <!-- viewport ends -->
+      </div>
+
+      <!-- <div class="ball" id="ball-one"></div>
+      <div class="ball" id="ball-two"></div>
+      <div class="ball" id="ball-three"></div> -->
+   </div>
+
+   <script src="js/vendors/jquery.min.js"></script>
+   <script src="styles/module/ibg/ibg.js"></script>
+
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+
+   <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+         apiKey: "AIzaSyCpyGPrilNijYfffJepsTJPJTP1-YW2JX0",
+         authDomain: "picteria-48995.firebaseapp.com",
+         projectId: "picteria-48995",
+         storageBucket: "picteria-48995.appspot.com",
+         messagingSenderId: "488576556112",
+         appId: "1:488576556112:web:ae945944006e6c1d060555"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+   </script>
+
+   <script>
+      let dropArea = document.getElementById('card-upload-area');
+
+      ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+         dropArea.addEventListener(eventName, preventDefaults, false)
+      })
+
+      function preventDefaults(e) {
+         e.preventDefault();
+         e.stopPropagation();
+      }
+
+
+      ['dragenter', 'dragover'].forEach(eventName => {
+         dropArea.addEventListener(eventName, highlight, false)
+      });
+
+
+
+      ['dragleave', 'drop'].forEach(eventName => {
+         dropArea.addEventListener(eventName, unhighlight, false)
+      });
+
+      function highlight(e) {
+         dropArea.classList.add('is-highlighted')
+      }
+
+      function unhighlight(e) {
+         dropArea.classList.remove('is-highlighted')
+      }
+
+
+      dropArea.addEventListener('drop', handleDrop, false)
+
+      function handleDrop(e) {
+         let dt = e.dataTransfer
+         let files = dt.files
+
+         handleFiles(files)
+      }
+
+      function handleFiles(files) {
+         ([...files]).forEach(uploadFile)
+      }
+
+
+      function uploadFile(file) {
+
+         // Create a root reference
+         var storageRef = firebase.storage().ref();
+
+         // Create a reference to new file
+         var fileRef = storageRef.child('picteria/' + file.name);
+
+         // 'file' comes from the Blob or File API
+         fileRef.put(file).then((snapshot) => {
+            console.log('Uploaded a blob or file!');
+         });
+      }
+   </script>
+</body>
+
+</html>
