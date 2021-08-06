@@ -21,9 +21,14 @@
    width: 4.7rem;
    height: 4.7rem;
    top: 52.3rem;
-   left: 3.9rem;
+   right: 72vw;
    @media (min-width: 41.875em){
-      left: 13vw;
+      right: 80vw;
+      top: 48rem;
+   }
+   @media (min-width: 66.875em){
+      right: 49vw;
+      top: 47rem;
    }
 }
 #ball-three{
