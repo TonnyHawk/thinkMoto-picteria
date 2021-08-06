@@ -34,6 +34,7 @@ function css(){
          .pipe(autoprefixer())
          .pipe(sourcemaps.write())
          .pipe(dest('./src/css/'))
+         .pipe(dest('./picteria/public/css/'))
          .pipe(browserSync.stream());
 }
 
