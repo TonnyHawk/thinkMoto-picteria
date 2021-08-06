@@ -1,26 +1,32 @@
 .header {
    display: flex;
    flex-direction: column;
-   margin-bottom: 12.2rem;
+   width: 100%;
+   align-items: center;
    @media (min-width: 66.875em){
       flex-direction: row;
       width: 100%;
       justify-content: space-between;
+      align-items: flex-start;
    }
 
    // .header__offer
 
    &__offer {
       order: 2;
-      margin-top: 16.2rem;
+      margin-top: 4.6rem;
       max-width: 36.5rem;
       @media (min-width: 57.5em){
-         margin-top: 20vw;
+         margin-top: 7vw;
+         max-width: 41.5rem;
       }
       @media (min-width: 66.875em){
          order: 1;
          margin-top: 16.2rem;
+         flex: 0 0 auto;
+         margin-right: 50px;
       }
+      // background: green;
    }
 
    // .header__title
@@ -28,6 +34,10 @@
    &__title {
       font-size: 3.6rem;
       font-weight: 700;
+      @media (min-width: 57.5em){
+         font-size: 48px;
+         line-height: 58px;
+      }
    }
 
    // .header__descr
@@ -35,27 +45,62 @@
    &__descr {
       font-size: 1.8rem;
       margin: 3.6rem 0;
+      @media (min-width: 57.5em){
+         font-size: 20px;
+         line-height: 157%;
+      }
    }
 
    // .header__action
 
-   &__action {
-   }
+   &__action{
+         color: white;
+         display: block;
+         width: max-content;
+      }
 
    // .header__aside
 
    &__aside {
       order: 1;
+      // background: purple;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      width: 111%;
+      margin-top: 6.5rem;
+      height: 39.4rem;
+      @media (min-width: 34.375em){
+         width: 100%;
+      }
+      @media (min-width: 40.625em){
+         height: 62vw;
+         width: 100%;
+         max-width: 66rem;
+         max-height: 49rem;
+      }
       @media (min-width: 66.875em){
          order: 2;
-         margin-right: 9vw;
+         flex: 1 0;
+         max-height: 42rem;
+         max-width: none;
+         bottom: -2rem;
+         height: 33vw;
+         align-items: center;
       }
    }
 
    // .header__collection
 
    &__collection {
+      // background: gainsboro;
+      // border: 5px solid red;
+      width: 100%;
+      @media (min-width: 66.875em){
+         height: 32vw;
+         max-width: 54rem;
+         max-height: 37.1rem;
+      }
    }
-}
-.ibg {
 }

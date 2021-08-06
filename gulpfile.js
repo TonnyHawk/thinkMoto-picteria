@@ -34,12 +34,15 @@ function css(){
          .pipe(autoprefixer())
          .pipe(sourcemaps.write())
          .pipe(dest('./src/css/'))
+         .pipe(dest('./picteria/public/css/'))
          .pipe(browserSync.stream());
 }
 
 let go = series(css, server)
+let styles = series(css)
 
 exports.default = go;
+exports.styles = styles;
 
 
 

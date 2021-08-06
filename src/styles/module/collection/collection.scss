@@ -1,12 +1,13 @@
 .collection {
    display: flex;
    position: relative;
+   height: 100%;
    justify-content: center;
-   margin: 21rem auto 0;
+   align-items: center;
 
    // .collection__photo
 
-   &__photo {
+   &__photo{
       width: 26rem;
       height: 17.5rem;
       box-shadow: 0px 6px 27px -9px #0E112D;
@@ -17,56 +18,41 @@
          height: 13rem;
          position: absolute;
          z-index: 1;
-         max-width: 22.2rem;
-         max-height: 14.8rem;
-         @media (min-width: 41.875em){
-            height: 18vw;
-            width: 27vw;
+         @media (min-width: 40.625em){
+            width: 39%;
+            height: 35%;
          }
          @media (min-width: 66.875em){
-            height: 12vw;
-            width: 18vw;
+            width: 41%;
+            height: 39%;
+            max-width: 22.2rem;
+            max-height: 14.8rem;
          }
       }
       &:nth-child(1){
-         top: -11.2rem;
-         left: -2rem;
-         @media (min-width: 41.875em){
-            left: -12vw;
-            top: -12vw;
-         }
-         @media (min-width: 66.875em){
-            left: -15rem;
-            top: -9.5rem;
-         }
+         top: 0;
+         left: 0;
       }
       &:nth-child(2){
          position: relative;
          z-index: 2;
          box-shadow: 0px 6px 50px -3px #0E112D;
-         max-height: 20.4rem;
-         max-width: 30.5rem;
-         @media (min-width: 41.875em){
-            width: 40vw;
-            height: 27vw;
+         width: 26.1rem;
+         height: 17.4rem;
+         @media (min-width: 40.625em){
+            width: 51%;
+            height: 46%;
          }
          @media (min-width: 66.875em){
-            width: 23vw;
-            height: 15vw;
+            height: 50%;
+            width: 51%;
+            max-height: 20.4rem;
+            max-width: 30.5rem;
          }
       }
       &:nth-child(3){
-         bottom: -10.9rem;
-         right: -1.8rem;
-         filter: saturate(165%) brightness(0.9);
-         @media (min-width: 41.875em){
-            right: -12vw;
-            bottom: -12vw;
-         }
-         @media (min-width: 66.875em){
-            right: -17.4rem;
-            top: 10.6rem;
-         }
+         bottom: 0;
+         right: 0;
       }
    }
 }

@@ -2,7 +2,6 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   max-width: 121rem;
    font-family: gilroy;
    padding-top: 2.6rem;
    margin: 0 3rem;
@@ -19,8 +18,11 @@
    &__menu-icon {
       cursor: pointer;
       order: 2;
-      @media (min-width: 66.875em){
-         order: 1;
+      &.ic-wth-txt{
+         display: none;
+      }
+      a{
+         color: black;
       }
    }
 
@@ -28,8 +30,30 @@
 
    &__logo {
       order: 1;
-      @media (min-width: 66.875em){
-         order: 2;
+      margin-left: auto;
+   }
+
+   path{
+      stroke: white;
+   }
+
+   &.darken{
+      .logo{
+         color: black;
+      }
+      .logo__dash{
+         background-color: black;
+      }
+      path{
+         stroke: black;
+      }
+   }
+   &.full{
+      .nav{
+         &__menu-icon.ic-wth-txt {display: flex;}
+         &__logo {
+            margin-left: 0;
+         }
       }
    }
 }

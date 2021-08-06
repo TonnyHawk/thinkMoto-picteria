@@ -1,5 +1,6 @@
 @import 'basic/reset.css';
 @import 'basic/mixins';
+@import 'basic/colors';
 @import 'module/ibg/ibg.css';
 
 @import 'layout/grid';
@@ -11,11 +12,11 @@
 @import 'module/header/header';
 @import 'module/ball/ball';
 
-@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Regular', 500);
-@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Semibold', 600);
-@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Bold', bold);
-@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Black', 800);
-@include font-face(aclonica, '../fonts/Aclonica/Aclonica-Regular');
+@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Regular', 500, normal, woff ttf);
+@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Semibold', 600, normal, woff ttf);
+@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Bold', bold, normal, woff ttf);
+@include font-face(gilroy, '../fonts/Gilroy/Gilroy-Black', 800, normal, woff ttf);
+@include font-face(aclonica, '../fonts/Aclonica/Aclonica-Regular', 400, normal, woff ttf woff2);
 
 html{
    font-size: 62.5%;
@@ -23,6 +24,7 @@ html{
 }
 #bg{
    background: linear-gradient(33deg, #42C8E6 4.15%, rgba(83, 77, 189, 0.610729) 51.61%, rgba(215, 21, 125, 0.58) 98.64%);
+   // background: #E8F2F4;
    @include layer;
    position: relative;
    overflow: hidden;
@@ -55,3 +57,69 @@ h1, h2{
    border: none;
 }
 
+
+.flex {
+   display: flex;
+}
+.justify-content-between {
+   justify-content: space-between;
+}
+.d-none{display: none!important;}
+.status-btn {
+   position: relative;
+   @include square(3.4rem);
+   border-radius: 100%;
+   @include perfect-center;
+   &:after{
+      content: '';
+      @include layer;
+   }
+   &.success {
+      background: $success;
+      &:after{
+         background-image: url('../img/icons/status-btn/success.svg');
+         background-position: center;
+         background-size: auto;
+         background-repeat: no-repeat;
+      }
+   }
+   &.fail {
+      background: $fail;
+      &:after{
+         background-image: url('../img/icons/status-btn/failed.svg');
+         background-position: center;
+         background-size: auto;
+         background-repeat: no-repeat;
+      }
+   }
+}
+.btn{
+   font-family: Gilroy;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 150%;
+   padding: 2rem 3rem;
+   background: #0563F1;
+   border-radius: 11px;
+   
+   text-align: center;
+   
+   color: #FFFFFF;
+
+   &.is-disabled{
+      background: #E0E0E0;
+   }
+}
+
+@import 'module/card/card';
+@import 'module/slider/slider';
+
+@import 'module/ic-wth-txt/ic-wth-txt';
+
+.viewport{
+   @media (min-width: 68.75em){
+      max-height: 100vh;
+      overflow: hidden;
+   }
+}
