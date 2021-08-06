@@ -181,11 +181,6 @@ class Card extends Component {
 
       return ( 
       <div id="card" className="card">
-      <div className="card__close-btn">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23 1L1.5 22.5M1.5 1L23 22.5" stroke="black" strokeWidth={2} />
-        </svg>
-      </div>
       <div className="card__header">
         <h1 className="card__title">Upload your files</h1>
         <p className="card__text">Files should be jpg or png</p>
