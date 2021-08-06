@@ -13,35 +13,36 @@
 
    <div id="bg">
 
-      <div class="viewport">
+      <!-- <div class="viewport"> -->
 
 
-         <div class="container">
+      <div class="container">
 
-            <div class="nav darken">
-               <div class="nav__menu-icon ic-wth-txt">
-                  <div class="ic-wth-txt__txt">
-                     Decline
-                  </div>
-                  <div class="ic-wth-txt__ic">
-                     <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 1.33035L1 20.3304" stroke-width="2" />
-                        <path d="M1 1.66965L20 20.6696" stroke-width="2" />
-                     </svg>
-                  </div>
+         <div class="nav darken" id='nav'>
+            <div class="nav__menu-icon ic-wth-txt">
+               <div class="ic-wth-txt__txt">
+                  Decline
                </div>
-               <div class="nav__logo logo">
-                  <p class="logo__name">picteria</p>
-                  <div class="logo__dash"></div>
-                  <p class="logo__descr">fast photo adjustments</p>
+               <div class="ic-wth-txt__ic">
+                  <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M20 1.33035L1 20.3304" stroke-width="2" />
+                     <path d="M1 1.66965L20 20.6696" stroke-width="2" />
+                  </svg>
                </div>
             </div>
+            <div class="nav__logo logo">
+               <p class="logo__name">picteria</p>
+               <div class="logo__dash"></div>
+               <p class="logo__descr">fast photo adjustments</p>
+            </div>
+         </div>
 
 
-            <!-- <header class="header">
+         <header class="header" id='header'>
             <div class="header__offer">
                <h1 class="header__title">adjust any photo in a minutes</h1>
-               <p class="header__descr">Add a great filters to your photo without any complex operations, just upload and see how it works!</p>
+               <p class="header__descr">Add a great filters to your photo without any complex operations, just upload
+                  and see how it works!</p>
                <button class="header__action action-btn">Upload a photo</button>
             </div>
             <div class="header__aside">
@@ -57,10 +58,10 @@
                   </div>
                </div>
             </div>
-         </header> -->
-         </div>
-
-         <!-- <div class="container">
+         </header>
+      </div>
+      <div id="mycard" class="d-none">hello</div>
+      <!-- <div class="container">
          <div class="slider" id="slider">
             <div class="slider__current-slide">
                <div class="slider__current-photo ibg">
@@ -104,8 +105,8 @@
    </div>
 -->
 
-         <!-- viewport ends -->
-      </div>
+      <!-- viewport ends -->
+      <!-- </div> -->
 
       <!-- <div class="ball" id="ball-one"></div>
       <div class="ball" id="ball-two"></div>
@@ -114,6 +115,18 @@
 
    <script src="js/vendors/jquery.min.js"></script>
    <script src="styles/module/ibg/ibg.js"></script>
+   <script>
+      $('.header__action').click(function () {
+         $('#mycard').removeClass('d-none');
+         $('#nav').addClass('full');
+         $('#header').addClass('d-none');
+      })
+      $('.nav__menu-icon').click(function () {
+         $('#mycard').addClass('d-none');
+         $('#nav').removeClass('full');
+         $('#header').removeClass('d-none');
+      })
+   </script>
 </body>
 
 </html>

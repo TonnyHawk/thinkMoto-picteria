@@ -18,6 +18,9 @@
    &__menu-icon {
       cursor: pointer;
       order: 2;
+      &.ic-wth-txt{
+         display: none;
+      }
       a{
          color: black;
       }
@@ -27,6 +30,7 @@
 
    &__logo {
       order: 1;
+      margin-left: auto;
    }
 
    path{
@@ -42,6 +46,14 @@
       }
       path{
          stroke: black;
+      }
+   }
+   &.full{
+      .nav{
+         &__menu-icon.ic-wth-txt {display: flex;}
+         &__logo {
+            margin-left: 0;
+         }
       }
    }
 }

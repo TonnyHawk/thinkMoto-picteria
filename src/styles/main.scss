@@ -64,6 +64,7 @@ h1, h2{
 .justify-content-between {
    justify-content: space-between;
 }
+.d-none{display: none!important;}
 .status-btn {
    position: relative;
    @include square(3.4rem);
